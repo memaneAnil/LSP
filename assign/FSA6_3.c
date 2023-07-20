@@ -25,5 +25,6 @@ int main(int argc,char * argv[])
     }
     printf("%d",fd);   
 
+    close(fd);
     return 0;
 }

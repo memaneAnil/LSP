@@ -41,5 +41,7 @@ int main(int argc,char * argv[])
         }
     }
     printf("Max file size is %d\n",Max);
+
+    closedir(dp);
     return 0;
 }

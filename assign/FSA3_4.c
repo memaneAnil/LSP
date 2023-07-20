@@ -53,5 +53,7 @@ int main(int argc,char * argv[])
         }
     }
 
+    closedir(dp);
+
     return 0;
 }

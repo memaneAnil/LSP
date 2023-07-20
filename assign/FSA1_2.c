@@ -26,7 +26,7 @@ int main(int argc,char * argv[])
     {
         printf("Unable to open file\n");
     }
-    printf("%d",mode);
+    printf("%d\n",mode);
     close(fd);
     return 0;
 }

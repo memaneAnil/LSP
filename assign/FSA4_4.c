@@ -38,17 +38,15 @@ int main(int argc,char *argv[])
         if(entry->d_type == 8)
         {
             sprintf(path,"%s/%s",argv[1],entry->d_name);
-            //printf("%s\n",path);
             fd1 = open(path,O_RDONLY);
-            
             ret = read(fd1,Buffer,10);
-            //printf("%s",Buffer);
             write(fd,Buffer,ret);
         }
     }
 
     close(fd);
     close(fd1);
+    closedir(dp);
 
     return 0;
 }

@@ -18,15 +18,11 @@ int main(int argc,char *argv[])
     fd[1] = open(argv[2],O_RDONLY);
 
     fd[2] = creat("Combine.txt",0777);
-    //printf("%d\n",fd[2]);
-    // fd[2] = open("Combine.txt",O_RDWR |O_APPEND);
-    // printf("%d\n",fd[2]);
-
+    
     while(cnt < 2)
     {
         if((ret = read (fd[cnt],Buffer,MAXSIZE))!=0)
         {
-            //printf("%s",Buffer);
             write(fd[2],Buffer,ret);
         }
         cnt++;

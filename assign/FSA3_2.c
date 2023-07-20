@@ -2,13 +2,13 @@
 #include<fcntl.h>
 #include<dirent.h>
 #include<string.h>
-#include<stdbool.h>
+
 
 int main(int argc,char *argv[])
 {
     DIR *dp = NULL;
     struct dirent * entry = NULL;
-    bool Flag = false;
+    
 
     if(argc != 3)
     {
@@ -29,15 +29,16 @@ int main(int argc,char *argv[])
         if(strcmp(argv[2],entry->d_name) == 0)
         {
             printf("File is present in directory\n");
-            Flag = true;
             break;
         }
     }
 
-    if(!Flag)
+    if(entry == NULL)
     {
         printf("File is not present in directory\n");
     }
+
+    closedir(dp);
 
     return 0;
 }

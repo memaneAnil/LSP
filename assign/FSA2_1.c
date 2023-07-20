@@ -30,5 +30,7 @@ int main(int argc,char * argv[])
     }
 
     printf("File size = %d bytes\nData from file is :\n%s\n",ret,Buffer);
+
+    close(fd);
     return 0;
 }
