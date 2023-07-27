@@ -1,0 +1,1 @@
+int compareFile(char *,char *);
