@@ -11,6 +11,7 @@ int main()
     if(ret == 0)
     {
         ret1 = daemon(1,1);
+        
         if(ret1 == 0)
         {
             printf("Daemon process\n");

@@ -7,10 +7,10 @@ int main()
     int ret = 0;
     int pid = 0;
     
-        pid = getpid();
-        printf("Priority : %d\n",getpriority(PRIO_PROCESS,pid));
-        setpriority(PRIO_PROCESS,pid,5);
-        printf("Priority : %d\n",getpriority(PRIO_PROCESS,pid));
-   
+    pid = getpid();
+    printf("Priority : %d\n",getpriority(PRIO_PROCESS,pid));
+    nice(-2);
+    printf("Priority : %d\n",getpriority(PRIO_PROCESS,pid));
+
     return 0;
 }

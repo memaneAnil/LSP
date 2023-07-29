@@ -13,7 +13,7 @@ int main(int argc,char *argv[])
     printf("Enter the number\n");
     scanf("%d",&no);
 
-    ptr = dlopen("/home/anil/Desktop/Assign7_9/TestPrime.so",RTLD_LAZY);
+    ptr = dlopen("/TestPrime.so",RTLD_LAZY);
 
     if(ptr == NULL)
     {

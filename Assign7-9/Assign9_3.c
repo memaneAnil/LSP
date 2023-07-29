@@ -7,8 +7,8 @@ int main()
     int ret = 0;
     int pid = 0;
     
-        pid = getpid();
-        printf("Priority : %d\n",getpriority(PRIO_PROCESS,pid));
-   
+    pid = getpid();
+    printf("Priority : %d\n",getpriority(PRIO_PROCESS,pid));
+
     return 0;
 }
